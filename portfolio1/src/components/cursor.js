@@ -1,8 +1,7 @@
 import { useEffect, useRef } from "react";
-import Card from "../Cards.js";
-import "./Home.css"; // Import CSS
+import "./cursor.css";
 
-function Projects() {
+const CursorEffect = () => {
   const coords = useRef({ x: 0, y: 0 });
   const circlesRef = useRef([]);
 
@@ -29,7 +28,23 @@ function Projects() {
       coords.current.y = e.clientY;
     };
 
+    const handleClick = (e) => {
+      const ripple = document.createElement("div");
+      ripple.className = "ripple";
+      document.body.appendChild(ripple);
+
+      const size = Math.max(window.innerWidth, window.innerHeight);
+      ripple.style.width = ripple.style.height = `${size}px`;
+      ripple.style.left = `${e.clientX - size / 2}px`;
+      ripple.style.top = `${e.clientY - size / 2}px`;
+
+      ripple.addEventListener("animationend", () => {
+        ripple.remove();
+      });
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("click", handleClick);
 
     function animateCircles() {
       let x = coords.current.x;
@@ -55,26 +70,21 @@ function Projects() {
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("click", handleClick);
     };
   }, []);
 
   return (
-    <div>
-      <div>
-        {[...Array(22)].map((_, index) => (
-          <div
-            key={index}
-            className="circle"
-            ref={(el) => (circlesRef.current[index] = el)}
-          ></div>
-        ))}
-      </div>
-      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-        <Card title="Sample Card Projects" content="This is some sample content for the first card." />
-        <Card title="Sample Card Projects" content="This is some sample content for the second card." />
-      </div>
+    <div className="fixed inset-0 pointer-events-none">
+      {[...Array(200)].map((_, index) => (
+        <div
+          key={index}
+          className="circle"
+          ref={(el) => (circlesRef.current[index] = el)}
+        />
+      ))}
     </div>
   );
-}
+};
 
-export default Projects;
+export default CursorEffect;
