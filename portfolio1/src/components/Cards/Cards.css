@@ -1,0 +1,81 @@
+
+.card {
+    background: rgba(7, 7, 7, 0.9);  /* Semi-transparent white */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    margin-top: 10px;
+    overflow: hidden;
+    width: 600px;
+    height: 200px;
+    transition: transform 0.2s;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover 
+{
+    border: 1px solid white;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: #666;
+    line-height: 1.5;
+}
+
+.cardUp {
+    background: rgba(255, 255, 255, 0.9);  /* Semi-transparent white */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    margin-bottom: 0px;
+    overflow: hidden;
+    width: 450px;
+    height: 50px;
+    transition: transform 0.2s;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardUp:hover {
+    width: 600px;
+}
+
+.cardUp-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cardUp-content {
+    padding: 10px;
+}
+
+.cardUp-title {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.cardUp-text {
+    color: #666;
+    line-height: 1.5;
+}

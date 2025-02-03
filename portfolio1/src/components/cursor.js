@@ -10,11 +10,58 @@ const CursorEffect = () => {
     if (!circles.length) return;
 
     const colors = [
-      "#ffb56b", "#fdaf69", "#f89d63", "#f59761", "#ef865e",
-      "#ec805d", "#e36e5c", "#df685c", "#d5585c", "#d1525c",
-      "#c5415d", "#c03b5d", "#b22c5e", "#ac265e", "#9c155f",
-      "#950f5f", "#830060", "#7c0060", "#680060", "#60005f",
-      "#48005f", "#3d005e"
+      "#ffffff", // Pure white
+      "#fafafa",
+      "#f5f5f5",
+      "#f0f0f0",
+      "#ebebeb",
+      "#e6e6e6",
+      "#e1e1e1",
+      "#dcdcdc",
+      "#d7d7d7",
+      "#d2d2d2",
+      "#cdcdcd",
+      "#c8c8c8",
+      "#c3c3c3",
+      "#bebebe",
+      "#b9b9b9",
+      "#b4b4b4",
+      "#afafaf",
+      "#aaaaaa",
+      "#a5a5a5",
+      "#a0a0a0",
+      "#9b9b9b",
+      "#969696",
+      "#919191",
+      "#8c8c8c",
+      "#878787",
+      "#828282",
+      "#7d7d7d",
+      "#787878",
+      "#737373",
+      "#6e6e6e",
+      "#696969",
+      "#646464",
+      "#5f5f5f",
+      "#5a5a5a",
+      "#555555",
+      "#505050",
+      "#4b4b4b",
+      "#464646",
+      "#414141",
+      "#3c3c3c",
+      "#373737",
+      "#323232",
+      "#2d2d2d",
+      "#282828",
+      "#232323",
+      "#1e1e1e",
+      "#191919",
+      "#141414",
+      "#0f0f0f",
+      "#0a0a0a",
+      "#050505",
+      "#000000"  // Pure black
     ];
 
     circles.forEach((circle, index) => {
@@ -33,7 +80,7 @@ const CursorEffect = () => {
       ripple.className = "ripple";
       document.body.appendChild(ripple);
 
-      const size = Math.max(window.innerWidth, window.innerHeight);
+      const size = 100;
       ripple.style.width = ripple.style.height = `${size}px`;
       ripple.style.left = `${e.clientX - size / 2}px`;
       ripple.style.top = `${e.clientY - size / 2}px`;
@@ -76,7 +123,7 @@ const CursorEffect = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none">
-      {[...Array(200)].map((_, index) => (
+      {[...Array(36)].map((_, index) => (
         <div
           key={index}
           className="circle"

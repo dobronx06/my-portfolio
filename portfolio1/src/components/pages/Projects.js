@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import Card from "../Cards.js";
+import Card from "../Cards/Cards.js";
 import "./Home.css"; // Import CSS
 
 function Projects() {
