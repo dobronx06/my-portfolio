@@ -7,7 +7,7 @@ const NavbarMiddle = () => {
         <div class="nav_middle-content">
             <a href="#" class="nav_middle-item">ABOUT</a>
             <span class="separator">  </span>
-            <a href="#" class="nav_middle-item">CONTACT</a>
+            <a href="/contact" class="nav_middle-item">CONTACT</a>
             <span class="separator">  </span>
             <span class="title">WORK</span>
             <span class="separator">  </span>

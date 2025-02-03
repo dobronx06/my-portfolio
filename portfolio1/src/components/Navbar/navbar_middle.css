@@ -33,7 +33,7 @@
 
 .navbar_middle:hover .nav_middle-item {
     opacity: 0.7;
-    max-height: 50px; /* Adjust this value based on your content */
+    max-height: 50px;
     pointer-events: auto;
 }
 
@@ -45,3 +45,33 @@
     color: whitesmoke;
     opacity: 0.7;
 }
+
+.navbar_middle {
+    position: fixed;
+    left: clamp(5px, 2vw, 20px);
+    top: 50%;
+    transform: translateY(-50%);
+    padding: clamp(1rem, 3vw, 2rem);
+  }
+  
+  .nav_middle-content {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    gap: clamp(0.2rem, 1vw, 1rem);
+  }
+  
+  @media (max-width: 768px) {
+    .navbar_middle {
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 1rem;
+      transform: none;
+    }
+  
+    .nav_middle-content {
+      flex-direction: row;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+  }
