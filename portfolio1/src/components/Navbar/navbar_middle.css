@@ -4,7 +4,8 @@
     top: 50%;
     transform: translateY(-50%);
     padding: 2rem;
-    color: white;
+    color: var(--color-white);
+    z-index: 1000;
 }
 
 .nav_middle-content {
@@ -17,12 +18,12 @@
 }
 
 .title {
-    color: white;
+    color: var(--color-beige);
     font-weight: normal;
 }
 
 .nav_middle-item {
-    color: whitesmoke;
+    color: var(--color-beige);
     text-decoration: none;
     opacity: 0;
     max-height: 0;
@@ -66,6 +67,7 @@
       width: 100%;
       background: rgba(0, 0, 0, 0.8);
       padding: 1rem;
+      padding-left: 2rem;
       transform: none;
     }
   
@@ -75,3 +77,4 @@
       font-size: 0.9rem;
     }
   }
+  

@@ -1,20 +1,50 @@
 import React from 'react';
 import './navbar_middle.css';
+import { useLocation } from 'react-router-dom';
+
 
 const NavbarMiddle = () => {
+  const { pathname } = useLocation();
+  const path = pathname;
+
+  const Page = {
+    HOME: '/',
+    ABOUT: '/about',
+    BLOG: '/blog',
+    SERVICES: '/services',
+    CONTACT: '/contact'
+  };
+   
+  let currentPage = path === Page.HOME ? 'HOME' : path === Page.ABOUT ? 'ABOUT' : path === Page.BLOG ? 'BLOG' : path === Page.SERVICES ? 'SERVICES' : 'CONTACT';
+
+  let navItems = [
+    { name: 'HOME', path: Page.HOME, isCurrent: currentPage === 'HOME' },
+    { name: 'ABOUT', path: Page.ABOUT, isCurrent: currentPage === 'ABOUT' },
+    { name: 'BLOG', path: Page.BLOG, isCurrent: currentPage === 'BLOG' },
+    { name: 'SERVICES', path: Page.SERVICES, isCurrent: currentPage === 'SERVICES' },
+    { name: 'CONTACT', path: Page.CONTACT, isCurrent: currentPage === 'CONTACT' }
+  ];
+
+  let currentIndex = navItems.findIndex(item => item.isCurrent);
+  if (currentPage !== 'BLOG')
+    navItems[currentIndex] = navItems.splice(2, 1, navItems[currentIndex])[0];
+
+  const visibleNavItems = navItems
+
   return (
-    <nav class="navbar_middle">
-        <div class="nav_middle-content">
-            <a href="#" class="nav_middle-item">ABOUT</a>
-            <span class="separator">  </span>
-            <a href="/contact" class="nav_middle-item">CONTACT</a>
-            <span class="separator">  </span>
-            <span class="title">WORK</span>
-            <span class="separator">  </span>
-            <a href="#" class="nav_middle-item">BLOG</a>
-            <span class="separator">  </span>
-            <a href="#" class="nav_middle-item">SERVICES</a>
-        </div>
+    <nav className="navbar_middle">
+      <div className="nav_middle-content">
+        {visibleNavItems.map((item) => (
+          <React.Fragment key={item.name}>
+            {item.isCurrent ? (
+              <span className="title">{item.name}</span>
+            ) : (
+              <a href={item.path} className="nav_middle-item">{item.name}</a>
+            )}
+            <span className="separator"> </span>
+          </React.Fragment>
+        ))}
+      </div>
     </nav>
   );
 };

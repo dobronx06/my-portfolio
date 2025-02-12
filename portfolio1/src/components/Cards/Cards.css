@@ -1,163 +1,111 @@
 .card {
-    background: rgba(168, 168, 168, 0.438);  /* Semi-transparent white */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    margin-top: 10px;
-    overflow: hidden;
-    width: 100%;
-    max-width: 600px;
-    height: 200px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
-    z-index: 99999;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid transparent;
+  background: rgba(90, 102, 107, 0.438);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--color-beige); /* Using our darkest gray */
+  overflow: hidden;
+  width: clamp(280px, 90vw, 600px);
+  height: auto;
+  min-height: 200px;
+  margin: 15px clamp(10px, 3vw, 20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
 }
 
-.card {
-    position: fixed;
-    left: 30%;
-    top: 20%;
-  }
-
 .card:hover {
-    border: 1px solid white;
+  border: 1px solid var(--color-white);
 }
 
 .card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .card-content {
-    padding: 20px;
-    font-family: system-ui, -apple-system, sans-serif;
+  padding: 20px;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 .card-title {
-    color: #333;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  color: var(--color-white);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .card-text {
-    color: #666;
-    line-height: 1.5;
+  color: var(--color-beige);
+  line-height: 1.5;
 }
 
 .cardUp {
-    background: rgba(245, 245, 245, 0.685);  /* Semi-transparent white */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    margin-bottom: 0px;
-    overflow: hidden;
-    width: 80%;
-    max-width: 450px;
-    height: 50px;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
-    z-index: 99999;
-    display: flex;
-    flex-direction: column;
+  background: rgba(var(--color-nature), 0.685);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--color-beige);
+  overflow: hidden;
+  width: clamp(280px, 90vw, 450px);
+  height: 50px;
+  margin: 15px clamp(10px, 3vw, 20px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
 }
-
-.cardUp {
-    position: fixed;
-    left: 30%;
-    top: 13%;
-  }
 
 .cardUp:hover {
-    width: 100%;
+  width: 100%;
+  max-width: 600px;
 }
 
 .cardUp-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .cardUp-content {
-    padding: 10px;
-    font-family: system-ui, -apple-system, sans-serif;
+  padding: 10px;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 .cardUp-title {
-    color: #333;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  color: var(--color-white);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .cardUp-text {
-    color: #666;
-    line-height: 1.5;
-}
-
-
-.card {
-    width: clamp(280px, 90vw, 600px);
-    height: auto;
-    min-height: 200px;
-    margin: 15px clamp(10px, 3vw, 20px);
-  }
-  
-  .cardUp {
-    width: clamp(280px, 90vw, 450px);
-    margin: 15px clamp(10px, 3vw, 20px);
-  }
-  
-  @media (max-width: 768px) {
-    .card-content {
-      padding: 15px;
-    }
-    
-    .card-title {
-      font-size: 1.25rem;
-    }
-    
-    .cardUp:hover {
-      max-width: 90vw;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .card {
-      margin: 10px;
-    }
-    
-    .cardUp {
-      height: 40px;
-    }
-  }
-
-  .cardUp {
-    width: 80%;
-    max-width: 450px;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    margin: 15px clamp(10px, 3vw, 20px);
-}
-
-.cardUp:hover {
-    width: 100%;
-    max-width: 600px;
+  color: var(--color-gris);
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
-    .cardUp {
-        width: clamp(280px, 90vw, 450px);
-    }
-    
-    .cardUp:hover {
-        width: 80vw;
-        max-width: 80vw;
-    }
-}
-  
-  @media (max-width: 768px) {
-    .card, .cardUp {
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  .card-content {
+    padding: 15px;
   }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .cardUp {
+    width: 80%
+  }
+
+  .cardUp:hover {
+    width: 100%;
+    max-width: 370px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    margin: 10px;
+  }
+  
+  .cardUp {
+    height: 40px;
+  }
+}

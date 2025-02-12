@@ -1,3 +1,10 @@
+:root {
+  --color-vert: #F5F5F5;     /* Lightest - for primary elements/icons */
+  --color-nature: #D4D4D4;   /* Light - for secondary elements */
+  --color-gris: #9A9A9A;     /* Medium - for tertiary elements */
+  --color-white: #707070;    /* Dark - for text/important elements */
+  --color-beige: #404040;    /* Darkest - for emphasis/borders */
+}
 
 .App-logo {
   height: 40vmin;
@@ -11,13 +18,16 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #bdbfc4a2;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  background-image: url('images/pexels-pixabay-355887.jpg'); /* Add your image path here */
+  background-size: cover; /* Adjust the background size */
+  background-position: center;
   color: white;
 }
 
@@ -33,11 +43,15 @@
     transform: rotate(360deg);
   }
 }
-/* App.css */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-vert);
 }
 
 body, html {
@@ -60,11 +74,19 @@ body, html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(0, 0, 0);
-  background-size: cover;
-  background-position: center;
-  z-index: -999999;
+  z-index: -999; /* Ensure the veil is above the background image but below other content */
 }
+
+.App::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1000; /* Ensure the background image is below the veil */
+}
+
 
 .navbar, .Routes {
   position: relative;
