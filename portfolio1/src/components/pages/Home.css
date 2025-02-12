@@ -4,6 +4,16 @@
     justify-content: center; /* Center content vertically */
     align-items: center;
     width: 100%;
-    height: 100vh; /* Take up full height of the viewport */
     padding: 1rem;
 }
+
+.card-container-title {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 8rem;
+    margin-bottom: 8rem;
+    align-items: center;
+    text-align: center;
+    color: var(--color-beige);
+    font-weight: 500;
+    z-index: 999999999999;
+  }

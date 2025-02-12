@@ -2,7 +2,7 @@
   background: rgb(153, 159, 160);
   box-shadow: 0 4px 8px var(--color-beige); /* Using our darkest gray */
   overflow: hidden;
-  width: clamp(280px, 90vw, 600px);
+  width: clamp(280px, 90vw, 750px);
   height: auto;
   min-height: 200px;
   margin: 15px clamp(10px, 3vw, 20px);
@@ -43,8 +43,8 @@
   background: rgba(var(--color-nature), 0.685);
   box-shadow: 0 4px 8px var(--color-beige);
   overflow: hidden;
-  width: clamp(280px, 90vw, 450px);
-  height: 50px;
+  width: clamp(280px, 90vw, 600px);
+  height: 100px;
   margin: 15px clamp(10px, 3vw, 20px);
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
   z-index: 99999;
@@ -54,7 +54,7 @@
 
 .cardUp:hover {
   width: 100%;
-  max-width: 600px;
+  max-width: 750px;
 }
 
 .cardUp-image {
@@ -65,6 +65,7 @@
 
 .cardUp-content {
   padding: 10px;
+  padding-top: 5%;
   font-family: system-ui, -apple-system, sans-serif;
 }
 

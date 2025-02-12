@@ -23,13 +23,6 @@ const ContactForm = () => {
   return (
     <div className="form-container">
       <div className="form-wrapper">
-        {/* Header Card */}
-        <div className="header-card">
-          <div className="header-content">
-            <h2 className="header-title">Contact Us</h2>
-          </div>
-        </div>
-
         {/* Main Form Card */}
         <div className="main-card">
           <form onSubmit={handleSubmit} className="contact-form">

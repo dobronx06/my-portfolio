@@ -33,6 +33,7 @@
   top: 50%;
   left: calc(50% + 1rem);
   width: 100%;
+  font-size: 1.5rem;
 }
 
 .timeline-connector {
@@ -111,5 +112,28 @@
     
     .timeline-header small {
       font-size: 0.75rem;
+    }
+  }
+
+  .timeline-image {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    z-index: 99999;
+  }
+  
+  .timeline-image img {
+    width: 200%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    z-index: 99999;
+  }
+  
+  @media (max-width: 768px) {
+    .timeline-image {
+      width: 150px; /* Smaller for mobile */
     }
   }

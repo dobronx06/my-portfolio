@@ -5,7 +5,10 @@ import ContactForm from "../ContactForm/ContactForm.js";
 function Contact() {
   return (
     <div>
-    <div className="contact-container">
+        <div className="contact-container-title">
+          Contact Me
+        </div>
+      <div className="contact-container">
         <ContactForm />
         <NavbarMiddle />
       </div>
