@@ -1,6 +1,5 @@
 .card {
-  background: rgba(90, 102, 107, 0.438);
-  border-radius: 8px;
+  background: rgb(153, 159, 160);
   box-shadow: 0 4px 8px var(--color-beige); /* Using our darkest gray */
   overflow: hidden;
   width: clamp(280px, 90vw, 600px);
@@ -42,7 +41,6 @@
 
 .cardUp {
   background: rgba(var(--color-nature), 0.685);
-  border-radius: 8px;
   box-shadow: 0 4px 8px var(--color-beige);
   overflow: hidden;
   width: clamp(280px, 90vw, 450px);

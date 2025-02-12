@@ -17,18 +17,14 @@
   }
 }
 
-.App-header {
-  background-color: #bdbfc4a2;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  background-image: url('images/pexels-pixabay-355887.jpg'); /* Add your image path here */
-  background-size: cover; /* Adjust the background size */
-  background-position: center;
-  color: white;
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #ffffffd0;
 }
 
 .App-link {

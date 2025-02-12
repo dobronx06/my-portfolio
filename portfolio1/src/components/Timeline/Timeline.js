@@ -15,11 +15,11 @@ const TimelineItem = ({ icon, title, date, description, index, isLast }) => {
     ];
     
     const positionsLeft = [
-      'calc(100% + 1rem)',    // First item
-      'calc(100% + 1rem)',    // Second item
-      'calc(100% + 1rem)',    // Third item
-      'calc(100% + 1rem)',    // Fourth item
-      'calc(-90%)'    // Fifth item
+      'calc(50% + 1rem)',    // First item
+      'calc(-70%)',    // Second item
+      'calc(50% + 1rem)',    // Third item
+      'calc(50% + 1rem)',    // Fourth item
+      'calc(-60%)'    // Fifth item
     ];
 
     return {
@@ -87,34 +87,34 @@ const TimelineItem = ({ icon, title, date, description, index, isLast }) => {
 export const Timeline = () => {
   const timelineItems = [
     {
-      icon: "🔔",
-      title: "$2400, Design changes",
-      date: "22 DEC 7:20 PM",
-      description: "Client requested design modifications for the landing page. Changes include updating the color scheme and reimagining the hero section."
+      icon: "🏫​",
+      title: "Last year of high school",
+      date: "September 2022 to June 2023",
+      description: "I obtained my Baccalaureate with honours in 2023. I was a student at the Lycée Notre-Dame de Bonsecours in Perpignan, France."
     },
     {
-      icon: "📦",
-      title: "New order #1832412",
-      date: "21 DEC 11 PM",
-      description: "Customer placed a bulk order for premium subscription packages. Order includes extended support and priority access."
+      icon: "💻",
+      title: "First year of university, Epitech",
+      date: "September 2023 to June 2024",
+      description: "I did my first year at Epitech Montpellier, a computer science school in Montpellier, France. I learned the basics of programming and the C language throughout a variety of advanced projects."
     },
     {
-      icon: "💰",
-      title: "Payment completed for order #4395133",
-      date: "20 DEC 2:20 AM",
-      description: "Successfully processed payment for enterprise-level subscription. Transaction verified and completed."
+      icon: "🏢",
+      title: "First Internship",
+      date: "July 2024 to December 2024",
+      description: "I had my first internship at elloha, a company specializing in travel technology solutions. I worked on various projects, gaining practical experience in software development. I worked in C# for backend integration and in html/css for front-end integration, i am now comfortable in both."
     },
     {
-      icon: "📱",
-      title: "Mobile app update v2.0",
-      date: "19 DEC 4:45 PM",
-      description: "Released major mobile app update with new user interface and improved performance metrics."
+      icon: "💻",
+      title: "Second year of university, Epitech",
+      date: "January 2025 to now",
+      description: "I started my second year at Epitech Montpellier, after overseeing python, C, C# and html/css. Now looking into C++"
     },
     {
-      icon: "✨",
-      title: "Feature launch: Analytics",
-      date: "18 DEC 9:30 AM",
-      description: "Launched new analytics dashboard with real-time data visualization capabilities."
+      icon: "❔",
+      title: "NOW",
+      date: "Waiting for you !",
+      description: "Currently learning react, this website show you what i can do yet 😉. I am also interested in IA models, IA agents, cryptocurrencies, and everything that is our future !"
     }
   ];
 
@@ -136,7 +136,6 @@ export const Timeline = () => {
           />
         ))}
       </div>
-      {/* Add extra padding at the bottom to ensure scrolling works for last items */}
       <div className="h-96"></div>
     </div>
   );
