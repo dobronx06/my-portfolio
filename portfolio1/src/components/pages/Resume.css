@@ -1,0 +1,191 @@
+:root {
+    --a4-width: 21cm;
+    --a4-height: 29.7cm;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  .resume {
+    width: var(--a4-width);
+    height: var(--a4-height);
+    margin: 10px auto;
+    background: white;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.308);
+  }
+  
+  .header {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    gap: 20px;
+    background: linear-gradient(to right, #5b7fab, #7e848d);
+    padding: 20px;
+    color: white;
+  }
+  
+  .photo {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .header-info {
+    padding-top: 5px;
+  }
+  
+  .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .subtitle {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  
+  .personal-info {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px 20px;
+    font-size: 13px;
+  }
+  
+  .about-me {
+    font-size: 13px;
+    line-height: 1.4;
+    padding-top: 5px;
+  }
+  
+  .main-content {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .left-column {
+    width: 240px;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .right-column {
+    flex: 1;
+    padding-left: 20px;
+    position: relative;
+  }
+
+    .section {
+        margin-bottom: 30px;
+    }
+
+  .section-separator {
+    margin: 20px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .section-title {
+    font-weight: bold;
+    font-style: italic;
+    margin: 20px 0 15px 0;
+  }
+  
+  .section-title:first-child {
+    margin-top: 0;
+  }
+  
+  .skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+  }
+  
+  .skills-list li {
+    margin-bottom: 8px;
+  }
+  
+  .nested-list {
+    list-style-type: none;
+    padding-left: 15px;
+    margin: 5px 0;
+  }
+  
+  .nested-list li::before {
+    content: "->";
+    margin-right: 5px;
+  }
+  
+  /* timelineprout styles */
+  .timelineprout {
+    position: relative;
+    margin-left: 15px;
+  }
+  
+  .timelineprout::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #666;
+  }
+  
+  .timelineprout-item {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 10px;
+  }
+  
+  .timelineprout-item::before {
+    content: '';
+    position: absolute;
+    left: -19px;
+    top: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #666;
+  }
+  
+  .timelineprout-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+  
+  .timelineprout-title {
+    font-weight: bold;
+  }
+  
+  .timelineprout-location {
+    color: #666;
+  }
+  
+  .timelineprout-subtitle {
+    font-style: italic;
+    font-size: 13px;
+    margin: 3px 0;
+  }
+  
+  .timelineprout-date {
+    font-size: 13px;
+    color: #666;
+    margin: 3px 0;
+  }
+  
+  .timelineprout-description {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-top: 5px;
+  }
+  
+  .date-arrow {
+    color: #666;
+    margin: 0 5px;
+  }

@@ -10,23 +10,23 @@ const NavbarMiddle = () => {
   const Page = {
     HOME: '/',
     ABOUT: '/about',
-    BLOG: '/blog',
+    RESUME: '/resume',
     SERVICES: '/services',
     CONTACT: '/contact'
   };
    
-  let currentPage = path === Page.HOME ? 'HOME' : path === Page.ABOUT ? 'ABOUT' : path === Page.BLOG ? 'BLOG' : path === Page.SERVICES ? 'SERVICES' : 'CONTACT';
+  let currentPage = path === Page.HOME ? 'HOME' : path === Page.ABOUT ? 'ABOUT' : path === Page.RESUME ? 'RESUME' : path === Page.SERVICES ? 'SERVICES' : 'CONTACT';
 
   let navItems = [
     { name: 'HOME', path: Page.HOME, isCurrent: currentPage === 'HOME' },
     { name: 'ABOUT', path: Page.ABOUT, isCurrent: currentPage === 'ABOUT' },
-    { name: 'BLOG', path: Page.BLOG, isCurrent: currentPage === 'BLOG' },
+    { name: 'RESUME', path: Page.RESUME, isCurrent: currentPage === 'RESUME' },
     { name: 'SERVICES', path: Page.SERVICES, isCurrent: currentPage === 'SERVICES' },
     { name: 'CONTACT', path: Page.CONTACT, isCurrent: currentPage === 'CONTACT' }
   ];
 
   let currentIndex = navItems.findIndex(item => item.isCurrent);
-  if (currentPage !== 'BLOG')
+  if (currentPage !== 'RESUME')
     navItems[currentIndex] = navItems.splice(2, 1, navItems[currentIndex])[0];
 
   const visibleNavItems = navItems
