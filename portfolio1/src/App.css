@@ -24,7 +24,7 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-color: #ffffffd0;
+  background-color: var(--color-vert);
 }
 
 .App-link {
@@ -95,4 +95,8 @@ body, html {
     min-height: 100vh;
     padding-top: clamp(40px, 8vh, 80px);
   }
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }

@@ -5,6 +5,7 @@ import Contact from './components/pages/Contact';
 import Resume from './components/pages/Resume';
 import About from './components/pages/About';
 import NetworkAnimation from './components/Background/particleEffect.js';
+import ThemeToggle from './components/Theme/Theme.js';
 
 function App() {
  
@@ -13,6 +14,7 @@ function App() {
       <div className="background-container">
         <NetworkAnimation />
       </div>
+      <ThemeToggle />
       <Router>
         <Routes>
           <Route path='/' exact element={<Home />} />
