@@ -1,11 +1,10 @@
 import React from 'react';
 import './navbar_middle.css';
-import { useLocation } from 'react-router-dom';
-
+import { useLocation, Link } from 'react-router-dom';
 
 const NavbarMiddle = () => {
   const { pathname } = useLocation();
-  const path = pathname;
+  const path = pathname === '/' ? '/' : pathname;
 
   const Page = {
     HOME: '/',
@@ -15,7 +14,10 @@ const NavbarMiddle = () => {
     CONTACT: '/contact'
   };
    
-  let currentPage = path === Page.HOME ? 'HOME' : path === Page.ABOUT ? 'ABOUT' : path === Page.RESUME ? 'RESUME' : path === Page.SERVICES ? 'SERVICES' : 'CONTACT';
+  let currentPage = path === Page.HOME ? 'HOME' : 
+                   path === Page.ABOUT ? 'ABOUT' : 
+                   path === Page.RESUME ? 'RESUME' : 
+                   path === Page.SERVICES ? 'SERVICES' : 'CONTACT';
 
   let navItems = [
     { name: 'HOME', path: Page.HOME, isCurrent: currentPage === 'HOME' },
@@ -29,7 +31,7 @@ const NavbarMiddle = () => {
   if (currentPage !== 'RESUME')
     navItems[currentIndex] = navItems.splice(2, 1, navItems[currentIndex])[0];
 
-  const visibleNavItems = navItems
+  const visibleNavItems = navItems;
 
   return (
     <nav className="navbar_middle">
@@ -39,7 +41,7 @@ const NavbarMiddle = () => {
             {item.isCurrent ? (
               <span className="title">{item.name}</span>
             ) : (
-              <a href={item.path} className="nav_middle-item">{item.name}</a>
+              <Link to={item.path} className="nav_middle-item">{item.name}</Link>
             )}
             <span className="separator"> </span>
           </React.Fragment>
