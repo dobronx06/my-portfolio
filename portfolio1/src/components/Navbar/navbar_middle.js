@@ -8,11 +8,11 @@ const NavbarMiddle = () => {
   const path = pathname;
 
   const Page = {
-    HOME: '/',
-    ABOUT: '/about',
-    RESUME: '/resume',
-    SERVICES: '/services',
-    CONTACT: '/contact'
+    HOME: '/my-portfolio/',
+    ABOUT: '/my-portfolio/about',
+    RESUME: '/my-portfolio/resume',
+    SERVICES: '/my-portfolio/services',
+    CONTACT: '/my-portfolio/contact'
   };
    
   let currentPage = path === Page.HOME ? 'HOME' : path === Page.ABOUT ? 'ABOUT' : path === Page.RESUME ? 'RESUME' : path === Page.SERVICES ? 'SERVICES' : 'CONTACT';
