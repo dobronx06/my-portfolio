@@ -45,9 +45,9 @@ function App() {
 
           {/* Other routes */}
           <Route path='/' element={showWelcome ? <Navigate to="/welcome" replace /> : <Home />} />
-          <Route path='/contact' element={showWelcome ? <Navigate to="/welcome" replace /> : <Contact />} />
-          <Route path='/about' element={showWelcome ? <Navigate to="/welcome" replace /> : <About />} />
-          <Route path='/resume' element={showWelcome ? <Navigate to="/welcome" replace /> : <Resume />} />
+          <Route path='/my-portfolio/contact' element={showWelcome ? <Navigate to="/welcome" replace /> : <Contact />} />
+          <Route path='/my-portfolio/about' element={showWelcome ? <Navigate to="/welcome" replace /> : <About />} />
+          <Route path='/my-portfolio/resume' element={showWelcome ? <Navigate to="/welcome" replace /> : <Resume />} />
 
           {/* Catch all route for 404 */}
           <Route path="*" element={<Navigate to="/" replace />} />
