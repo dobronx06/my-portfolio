@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import Resume from './components/pages/Resume';
@@ -19,8 +19,11 @@ function App() {
     localStorage.setItem('hasVisited', 'true');
   };
 
+  // Définir le basename pour GitHub Pages
+  const basename = process.env.PUBLIC_URL;
+
   return (
-    <Router>
+    <Router basename={basename}>
       <div className="App">
         <div className="background-container">
           <NetworkAnimation />
@@ -42,7 +45,7 @@ function App() {
 
           {/* Other routes */}
           <Route path='/' element={showWelcome ? <Navigate to="/welcome" replace /> : <Home />} />
-          <Route path='/contact' element={showWelcome ? <Navigate to="/welcome" replace /> : <Contact />} />
+          <Route path='/mycontact' element={showWelcome ? <Navigate to="/welcome" replace /> : <Contact />} />
           <Route path='/about' element={showWelcome ? <Navigate to="/welcome" replace /> : <About />} />
           <Route path='/resume' element={showWelcome ? <Navigate to="/welcome" replace /> : <Resume />} />
 
