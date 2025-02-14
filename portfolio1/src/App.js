@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import Resume from './components/pages/Resume';
@@ -19,11 +19,8 @@ function App() {
     localStorage.setItem('hasVisited', 'true');
   };
 
-  // Définir le basename pour GitHub Pages
-  const basename = process.env.PUBLIC_URL;
-
   return (
-    <Router basename={basename}>
+    <HashRouter>
       <div className="App">
         <div className="background-container">
           <NetworkAnimation />
@@ -31,29 +28,33 @@ function App() {
         <ThemeToggle />
         
         <Routes>
-          {/* Welcome page route */}
           <Route 
             path="/welcome" 
-            element={
-              showWelcome ? (
-                <WelcomePage onEnter={handleEnter} />
-              ) : (
-                <Navigate to="/" replace />
-              )
-            } 
+            element={showWelcome ? <WelcomePage onEnter={handleEnter} /> : <Navigate to="/" />} 
           />
-
-          {/* Other routes */}
-          <Route path='/' element={showWelcome ? <Navigate to="/welcome" replace /> : <Home />} />
-          <Route path='/mycontact' element={showWelcome ? <Navigate to="/welcome" replace /> : <Contact />} />
-          <Route path='/about' element={showWelcome ? <Navigate to="/welcome" replace /> : <About />} />
-          <Route path='/resume' element={showWelcome ? <Navigate to="/welcome" replace /> : <Resume />} />
-
-          {/* Catch all route for 404 */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route 
+            path="/" 
+            element={showWelcome ? <Navigate to="/welcome" /> : <Home />} 
+          />
+          <Route 
+            path="/contact" 
+            element={<Contact />} 
+          />
+          <Route 
+            path="/about" 
+            element={<About />} 
+          />
+          <Route 
+            path="/resume" 
+            element={<Resume />} 
+          />
+          <Route 
+            path="*" 
+            element={<Navigate to="/" />} 
+          />
         </Routes>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
