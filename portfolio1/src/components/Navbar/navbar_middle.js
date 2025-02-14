@@ -8,7 +8,7 @@ const NavbarMiddle = () => {
   const path = pathname;
 
   const Page = {
-    HOME: '/my-portfolio/',
+    HOME: '/',
     ABOUT: '/my-portfolio/about',
     RESUME: '/my-portfolio/resume',
     SERVICES: '/my-portfolio/services',
