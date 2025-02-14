@@ -20,7 +20,7 @@ function App() {
   };
 
   // Définir le basename pour GitHub Pages
-  const basename = process.env.PUBLIC_URL;
+  const basename = process.env.PUBLIC_URL + '/my-portfolio';
 
   return (
     <Router basename={basename}>
