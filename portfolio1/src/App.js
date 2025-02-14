@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import Resume from './components/pages/Resume';
@@ -19,11 +19,8 @@ function App() {
     localStorage.setItem('hasVisited', 'true');
   };
 
-  // Définir le basename pour GitHub Pages
-  const basename = process.env.PUBLIC_URL;
-
   return (
-    <Router basename={basename}>
+    <Router>
       <div className="App">
         <div className="background-container">
           <NetworkAnimation />
@@ -45,9 +42,9 @@ function App() {
 
           {/* Other routes */}
           <Route path='/' element={showWelcome ? <Navigate to="/welcome" replace /> : <Home />} />
-          <Route path='/my-portfolio/contact' element={showWelcome ? <Navigate to="/welcome" replace /> : <Contact />} />
-          <Route path='/my-portfolio/about' element={showWelcome ? <Navigate to="/welcome" replace /> : <About />} />
-          <Route path='/my-portfolio/resume' element={showWelcome ? <Navigate to="/welcome" replace /> : <Resume />} />
+          <Route path='/contact' element={showWelcome ? <Navigate to="/welcome" replace /> : <Contact />} />
+          <Route path='/about' element={showWelcome ? <Navigate to="/welcome" replace /> : <About />} />
+          <Route path='/resume' element={showWelcome ? <Navigate to="/welcome" replace /> : <Resume />} />
 
           {/* Catch all route for 404 */}
           <Route path="*" element={<Navigate to="/" replace />} />
