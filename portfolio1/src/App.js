@@ -11,7 +11,6 @@ import WelcomePage from './components/pages/Welcome.js';
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(() => {
-    // Check if user has visited before
     return !localStorage.getItem('hasVisited');
   });
 
@@ -20,8 +19,11 @@ function App() {
     localStorage.setItem('hasVisited', 'true');
   };
 
+  // Définir le basename pour GitHub Pages
+  const basename = process.env.PUBLIC_URL;
+
   return (
-    <Router>
+    <Router basename={basename}>
       <div className="App">
         <div className="background-container">
           <NetworkAnimation />
@@ -46,6 +48,9 @@ function App() {
           <Route path='/contact' element={showWelcome ? <Navigate to="/welcome" replace /> : <Contact />} />
           <Route path='/about' element={showWelcome ? <Navigate to="/welcome" replace /> : <About />} />
           <Route path='/resume' element={showWelcome ? <Navigate to="/welcome" replace /> : <Resume />} />
+
+          {/* Catch all route for 404 */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </Router>
