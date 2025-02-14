@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://dobronx06.github.io/my-portfolio/static/css/main.23550bd7.css",
-    "main.js": "https://dobronx06.github.io/my-portfolio/static/js/main.9bdc6f9e.js",
+    "main.js": "https://dobronx06.github.io/my-portfolio/static/js/main.4a67b622.js",
     "static/media/moicano.webp": "https://dobronx06.github.io/my-portfolio/static/media/moicano.5e87b1c1fdd17ee943ea.webp",
     "static/media/image.png": "https://dobronx06.github.io/my-portfolio/static/media/image.5077ef30e50a7d153d9f.png",
     "static/media/epitech.png": "https://dobronx06.github.io/my-portfolio/static/media/epitech.997e8253c434cc140bef.png",
@@ -9,10 +9,10 @@
     "static/media/photo_moi.png": "https://dobronx06.github.io/my-portfolio/static/media/photo_moi.054221dbffe6717d52a0.png",
     "index.html": "https://dobronx06.github.io/my-portfolio/index.html",
     "main.23550bd7.css.map": "https://dobronx06.github.io/my-portfolio/static/css/main.23550bd7.css.map",
-    "main.9bdc6f9e.js.map": "https://dobronx06.github.io/my-portfolio/static/js/main.9bdc6f9e.js.map"
+    "main.4a67b622.js.map": "https://dobronx06.github.io/my-portfolio/static/js/main.4a67b622.js.map"
   },
   "entrypoints": [
     "static/css/main.23550bd7.css",
-    "static/js/main.9bdc6f9e.js"
+    "static/js/main.4a67b622.js"
   ]
 }
