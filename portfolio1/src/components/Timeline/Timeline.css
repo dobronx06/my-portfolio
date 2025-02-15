@@ -137,4 +137,8 @@
     .timeline-image {
       width: 150px; /* Smaller for mobile */
     }
+
+    .timeline-title {
+      font-size: 4rem;
+    }
   }

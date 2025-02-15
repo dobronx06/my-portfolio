@@ -18,3 +18,11 @@
     font-weight: 500;
     z-index: 999999999999;
   }
+
+  @media screen and (max-width: 768px) {
+    .contact-container-title {
+      font-size: 6rem;
+      margin-bottom: 6rem;
+    }
+    
+  }
