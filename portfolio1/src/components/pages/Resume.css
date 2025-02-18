@@ -1,6 +1,7 @@
 :root {
     --a4-width: 21cm;
     --a4-height: 29.7cm;
+    --scale-factor: 1;
   }
   
   body {
@@ -188,4 +189,89 @@
   .date-arrow {
     color: #666;
     margin: 0 5px;
+  }
+
+  .prout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .resume {
+    width: var(--a4-width);
+    height: var(--a4-height);
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.308);
+    transform-origin: top center;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .resume {
+      transform: scale(1);
+    }
+    .name { font-size: 16px; }
+    .subtitle { font-size: 12px; }
+    .personal-info { font-size: 12px; }
+    .about-me { font-size: 12px; }
+    .skills-list, 
+    .timelineprout-title,
+    .timelineprout-subtitle,
+    .timelineprout-date,
+    .timelineprout-description { font-size: 12px; }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .resume {
+      transform: scale(0.9);
+    }
+    .name { font-size: 14px; }
+    .subtitle { font-size: 11px; }
+    .personal-info { font-size: 11px; }
+    .about-me { font-size: 11px; display: none; }
+    .skills-list, 
+    .timelineprout-title,
+    .timelineprout-subtitle,
+    .timelineprout-date,
+    .timelineprout-description { font-size: 11px; }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .resume {
+      transform: scale(0.7);
+    }
+    .name { font-size: 12px; }
+    .subtitle { font-size: 10px; }
+    .personal-info { font-size: 10px; }
+    .about-me { font-size: 10px; display: none;}
+    .skills-list, 
+    .timelineprout-title,
+    .timelineprout-subtitle,
+    .timelineprout-date,
+    .timelineprout-description { font-size: 10px; }
+  }
+  
+  /* Garder le reste de votre CSS original inchangé */
+  
+  @media print {
+    .resume {
+      transform: none;
+    }
+    
+    .prout {
+      padding: 0;
+      min-height: auto;
+    }
+    
+    /* Restaurer les tailles de police originales pour l'impression */
+    .name { font-size: 18px; }
+    .subtitle { font-size: 13px; }
+    .personal-info { font-size: 13px; }
+    .about-me { font-size: 13px; }
+    .skills-list, 
+    .timelineprout-title,
+    .timelineprout-subtitle,
+    .timelineprout-date,
+    .timelineprout-description { font-size: 13px; }
   }
