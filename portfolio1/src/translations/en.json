@@ -1,75 +1,75 @@
 {
-    "common": {
-      "phone": "Phone",
-      "location": "Location"
-    },
-    "nav": {
-      "home": "Home",
-      "about": "About",
-      "projects": "Projects",
-      "contact": "Contact"
-    },
-    "hero": {
-      "greeting": "Hello, I'm",
-      "name": "Tom Bouchard",
-      "title": "Web Developer",
-      "subtitle": "I create engaging digital experiences",
-      "cta": "Discover my projects",
-      "scrollDown": "Scroll down"
-    },
-    "about": {
-      "title": "About me",
-      "subtitle": "Passionate developer with an eye for design",
-      "description": [
-        "Passionate about web development and interface design, I strive to create digital experiences that are both aesthetic and functional.",
-        "My professional journey has allowed me to acquire varied skills in frontend development and UI/UX design, which I apply to bring ambitious projects to life.",
-        "I am constantly looking for new technical and creative challenges to continue evolving in this ever-changing field."
-      ],
-      "skills": "Skills",
-      "experience": "Experience",
-      "education": "Education",
-      "downloadResume": "Download my resume"
-    },
-    "projects": {
-      "title": "My projects",
-      "subtitle": "Discover my recent work",
-      "viewAll": "View all projects",
-      "viewDetails": "View details",
-      "visitSite": "Visit site",
-      "viewCode": "View code",
-      "technologies": "Technologies used",
-      "noProjects": "No projects to display at the moment."
-    },
-    "contact": {
-      "title": "Contact",
-      "subtitle": "Let's discuss your project",
-      "nameLabel": "Name",
-      "emailLabel": "Email",
-      "subjectLabel": "Subject",
-      "messageLabel": "Message",
-      "submitButton": "Send",
-      "success": "Your message has been sent successfully!",
-      "error": "An error occurred. Please try again.",
-      "social": "Social media",
-      "or": "or",
-      "findMe": "Find me on"
-    },
-    "background": {
-        "change": "Change background",
-        "particles": "Particles",
-        "grid": "Grid",
-        "waves": "Waves"
-    },
-    "footer": {
-      "copyright": "© 2025 Tom Bouchard. All rights reserved.",
-      "madeWith": "Made with React and lots of ☕"
-    },
-    "theme": {
-      "light": "Light theme",
-      "dark": "Dark theme"
-    },
-    "language": {
-      "fr": "French",
-      "en": "English"
-    }
+  "common": {
+    "phone": "Phone",
+    "location": "Location"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Tom Bouchard",
+    "title": "Student Developer",
+    "subtitle": "Passionate about web development, emerging technologies and AI",
+    "cta": "Discover my projects",
+    "scrollDown": "Scroll down"
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "Epitech Montpellier student with a passion for development",
+    "description": [
+      "Currently in my 2nd year at Epitech Montpellier, I'm intensively training in software development and complex problem-solving.",
+      "My internship at Elloha provided me with hands-on experience in web and backend development, complementing my academic training.",
+      "I'm proficient in multiple programming languages (C, C++, C#) and web technologies (React, HTML/CSS, JavaScript), with a strong interest in AI and blockchain."
+    ],
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "downloadResume": "Download my resume"
+  },
+  "projects": {
+    "title": "My projects",
+    "subtitle": "Discover my academic and personal work",
+    "viewAll": "View all projects",
+    "viewDetails": "View details",
+    "visitSite": "Visit site",
+    "viewCode": "View code",
+    "technologies": "Technologies used",
+    "noProjects": "No projects to display at the moment."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's discuss your project or a potential collaboration",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "subjectLabel": "Subject",
+    "messageLabel": "Message",
+    "submitButton": "Send",
+    "success": "Your message has been sent successfully!",
+    "error": "An error occurred. Please try again.",
+    "social": "Social media",
+    "or": "or",
+    "findMe": "Find me on"
+  },
+  "background": {
+    "change": "Change background",
+    "particles": "Particles",
+    "grid": "Grid",
+    "waves": "Waves"
+  },
+  "footer": {
+    "copyright": "© 2025 Tom Bouchard. All rights reserved.",
+    "madeWith": "Made with React and lots of ☕"
+  },
+  "theme": {
+    "light": "Light theme",
+    "dark": "Dark theme"
+  },
+  "language": {
+    "fr": "French",
+    "en": "English"
   }
+}
