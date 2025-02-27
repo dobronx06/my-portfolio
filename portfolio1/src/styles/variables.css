@@ -1,0 +1,105 @@
+:root {
+    /* Colors - Light Mode (NFT/Crypto Style) */
+    --color-background: #f8fafc;
+    --color-foreground: #0a0b0e;
+    --color-primary: #4361EE;
+    --color-secondary: #FF3864;
+    --color-accent: #00F5D4;
+    --color-muted: #64748b;
+    --color-border: #e2e8f0;
+    --color-card: #ffffff;
+    --color-success: #10b981;
+    --color-error: #ef4444;
+    --color-warning: #F7931A;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #4361EE, #00F5D4);
+    --gradient-secondary: linear-gradient(135deg, #FF3864, #00F5D4);
+    
+    /* Typography - inchangé */
+    --font-family-heading: 'Space Grotesk', 'SF Pro Display', -apple-system, sans-serif;
+    --font-family-body: 'Inter', 'SF Pro Text', -apple-system, sans-serif;
+    
+    /* Autres paramètres inchangés */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+    --font-size-6xl: 3.75rem;
+    
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    --spacing-0: 0;
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.25rem;
+    --spacing-6: 1.5rem;
+    --spacing-8: 2rem;
+    --spacing-10: 2.5rem;
+    --spacing-12: 3rem;
+    --spacing-16: 4rem;
+    --spacing-20: 5rem;
+    --spacing-24: 6rem;
+    --spacing-32: 8rem;
+    
+    --radius-sm: 0.125rem;
+    --radius-md: 0.25rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --radius-full: 9999px;
+    
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    
+    --z-0: 0;
+    --z-10: 10;
+    --z-20: 20;
+    --z-30: 30;
+    --z-40: 40;
+    --z-50: 50;
+    --z-auto: auto;
+    
+    --transition-normal: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+    --transition-fast: 0.15s ease-in-out;
+    
+    --max-width: 1200px;
+    --header-height: 70px;
+  }
+  
+  /* Dark Mode Variables - NFT/Crypto Style */
+  [data-theme="dark"] {
+    --color-background: #0a0b0e;
+    --color-foreground: #f8fafc;
+    --color-primary: #7209B7;
+    --color-secondary: #F72585;
+    --color-accent: #4CC9F0;
+    --color-muted: #94a3b8;
+    --color-border: #2d3748;
+    --color-card: #1e1e24;
+    --color-success: #059669;
+    --color-error: #dc2626;
+    --color-warning: #FFD700;
+    
+    --gradient-primary: linear-gradient(135deg, #7209B7, #4CC9F0);
+    --gradient-secondary: linear-gradient(135deg, #F72585, #4CC9F0);
+    
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  }

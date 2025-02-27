@@ -1,0 +1,97 @@
+/* Default variant */
+.social-links-default {
+    display: flex;
+    gap: var(--spacing-4);
+  }
+  
+  .social-link-default {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-card);
+    color: var(--color-foreground);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-border);
+  }
+  
+  .social-link-default:hover {
+    transform: translateY(-3px);
+    background-color: var(--color-primary);
+    color: white;
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Simple variant */
+  .social-links-simple {
+    display: flex;
+    gap: var(--spacing-4);
+  }
+  
+  .social-link-simple {
+    color: var(--color-muted);
+    transition: all var(--transition-fast);
+  }
+  
+  .social-link-simple:hover {
+    color: var(--color-primary);
+    transform: translateY(-2px);
+  }
+  
+  /* Large variant */
+  .social-links-large {
+    width: 100%;
+  }
+  
+  .social-links-title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-4);
+    font-weight: var(--font-weight-medium);
+  }
+  
+  .social-links-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+  
+  .social-link-large {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-3) var(--spacing-4);
+    background-color: var(--color-background);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    color: var(--color-foreground);
+    transition: all var(--transition-fast);
+    position: relative;
+  }
+  
+  .social-link-large:hover {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .social-link-text {
+    font-weight: var(--font-weight-medium);
+  }
+  
+  .external-link-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    opacity: 0.6;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .social-links-default {
+      justify-content: center;
+    }
+  }

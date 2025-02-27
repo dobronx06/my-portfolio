@@ -1,0 +1,287 @@
+.resume-container {
+    margin-bottom: var(--spacing-16);
+  }
+  
+  .resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-6);
+  }
+  
+  .resume-title {
+    font-size: var(--font-size-2xl);
+    color: var(--color-foreground);
+  }
+  
+  .resume-actions {
+    display: flex;
+    gap: var(--spacing-4);
+  }
+  
+  .resume-print-options {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-8);
+    background-color: var(--color-card);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-4);
+    border: 1px solid var(--color-border);
+  }
+  
+  .print-options-label {
+    font-weight: var(--font-weight-medium);
+    color: var(--color-muted);
+  }
+  
+  .print-options-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+  }
+  
+  .print-option-button {
+    padding: var(--spacing-2) var(--spacing-4);
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    color: var(--color-muted);
+    transition: all var(--transition-fast);
+  }
+  
+  .print-option-button:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  
+  .print-option-button.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+  }
+  
+  .resume-document {
+    background-color: var(--color-card);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-8);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-border);
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  .resume-paper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-8);
+    background-color: var(--color-background);
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-md);
+  }
+  
+  .resume-paper-header {
+    text-align: center;
+    margin-bottom: var(--spacing-8);
+    padding-bottom: var(--spacing-6);
+    border-bottom: 2px solid var(--color-primary);
+  }
+  
+  .resume-name {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-2);
+    color: var(--color-foreground);
+  }
+  
+  .resume-role {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-2);
+  }
+  
+  .resume-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-4);
+    color: var(--color-muted);
+  }
+  
+  .resume-section {
+    margin-bottom: var(--spacing-8);
+  }
+  
+  .resume-section-title {
+    font-size: var(--font-size-xl);
+    color: var(--color-foreground);
+    margin-bottom: var(--spacing-4);
+    padding-bottom: var(--spacing-2);
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .resume-item {
+    margin-bottom: var(--spacing-6);
+  }
+  
+  .resume-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-1);
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+  }
+  
+  .resume-item-title {
+    font-size: var(--font-size-lg);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+  }
+  
+  .resume-item-date {
+    color: var(--color-muted);
+    font-size: var(--font-size-sm);
+  }
+  
+  .resume-item-subtitle {
+    margin-bottom: var(--spacing-2);
+    color: var(--color-muted);
+    font-style: italic;
+  }
+  
+  .resume-item-list {
+    margin-bottom: var(--spacing-4);
+    padding-left: var(--spacing-6);
+  }
+  
+  .resume-item-list li {
+    margin-bottom: var(--spacing-2);
+    color: var(--color-foreground);
+  }
+  
+  .resume-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .resume-tech-tag {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-1) var(--spacing-2);
+    background-color: var(--color-card);
+    border-radius: var(--radius-md);
+    color: var(--color-muted);
+    border: 1px solid var(--color-border);
+  }
+  
+  .resume-skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-6);
+  }
+  
+  .resume-skill-group-title {
+    font-size: var(--font-size-md);
+    color: var(--color-foreground);
+    margin-bottom: var(--spacing-3);
+    font-weight: var(--font-weight-medium);
+  }
+  
+  .resume-skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+  }
+  
+  .resume-skill-tag {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-1) var(--spacing-3);
+    background-color: var(--color-card);
+    border-radius: var(--radius-md);
+    color: var(--color-muted);
+    border: 1px solid var(--color-border);
+  }
+  
+  /* Print styles */
+  @media print {
+    .resume-header,
+    .resume-print-options,
+    .resume-actions {
+      display: none;
+    }
+    
+    .resume-document {
+      padding: 0;
+      margin: 0;
+      box-shadow: none;
+      background: none;
+      border: none;
+    }
+    
+    .resume-paper {
+      box-shadow: none;
+      padding: 0;
+      max-width: 100%;
+    }
+    
+    .hidden-for-print {
+      display: none !important;
+    }
+    
+    body {
+      background-color: white;
+    }
+    
+    .resume-paper-header {
+      border-bottom-color: #333;
+    }
+    
+    .resume-section-title {
+      border-bottom-color: #ddd;
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .resume-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-4);
+    }
+    
+    .resume-actions {
+      width: 100%;
+    }
+    
+    .resume-document {
+      padding: var(--spacing-4);
+    }
+    
+    .resume-paper {
+      padding: var(--spacing-4);
+    }
+    
+    .resume-skills {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .resume-item-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .print-options-buttons {
+      width: 100%;
+    }
+    
+    .print-option-button {
+      flex: 1;
+      text-align: center;
+    }
+  }

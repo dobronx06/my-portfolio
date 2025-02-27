@@ -1,0 +1,105 @@
+.project-card-wrapper {
+    height: 100%;
+  }
+  
+  .project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-2);
+    color: var(--color-foreground);
+  }
+  
+  .project-card-description {
+    color: var(--color-muted);
+    margin-bottom: var(--spacing-4);
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .project-card-description.detailed {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+  }
+  
+  .project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .project-tech-tag {
+    background-color: var(--color-background);
+    color: var(--color-muted);
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-1) var(--spacing-2);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+  }
+  
+  .project-card-footer {
+    justify-content: space-between;
+    border-top: 1px solid var(--color-border);
+    margin-top: auto;
+    padding-top: var(--spacing-4);
+  }
+  
+  .view-details-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-fast);
+  }
+  
+  .view-details-link:hover {
+    color: var(--color-accent);
+    transform: translateX(2px);
+  }
+  
+  .project-links {
+    display: flex;
+    gap: var(--spacing-2);
+  }
+  
+  /* Stagger animation */
+  .project-card-wrapper.stagger-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition-delay: calc(var(--index) * 0.1s);
+  }
+  
+  .project-card-wrapper.stagger-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .project-card-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-4);
+    }
+    
+    .project-links {
+      width: 100%;
+    }
+  }

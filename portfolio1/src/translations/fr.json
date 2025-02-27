@@ -1,0 +1,75 @@
+{
+    "common": {
+      "phone": "Téléphone",
+      "location": "Localisation"
+    },
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "projects": "Projets",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Bonjour, je suis",
+      "name": "Tom Bouchard",
+      "title": "Développeur Web",
+      "subtitle": "Je crée des expériences digitales captivantes",
+      "cta": "Découvrir mes projets",
+      "scrollDown": "Défiler vers le bas"
+    },
+    "about": {
+      "title": "À propos de moi",
+      "subtitle": "Développeur passionné avec un œil pour le design",
+      "description": [
+        "Passionné par le développement web et le design d'interface, je m'efforce de créer des expériences numériques à la fois esthétiques et fonctionnelles.",
+        "Mon parcours professionnel m'a permis d'acquérir des compétences variées en développement frontend et en conception UI/UX, que j'applique pour donner vie à des projets ambitieux.",
+        "Je suis constamment à la recherche de nouveaux défis techniques et créatifs pour continuer à évoluer dans ce domaine en constante mutation."
+      ],
+      "skills": "Compétences",
+      "experience": "Expérience",
+      "education": "Formation",
+      "downloadResume": "Télécharger mon CV"
+    },
+    "projects": {
+      "title": "Mes projets",
+      "subtitle": "Découvrez mes réalisations récentes",
+      "viewAll": "Voir tous les projets",
+      "viewDetails": "Voir les détails",
+      "visitSite": "Visiter le site",
+      "viewCode": "Voir le code",
+      "technologies": "Technologies utilisées",
+      "noProjects": "Aucun projet à afficher pour le moment."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Discutons de votre projet",
+      "nameLabel": "Nom",
+      "emailLabel": "Email",
+      "subjectLabel": "Sujet",
+      "messageLabel": "Message",
+      "submitButton": "Envoyer",
+      "success": "Votre message a été envoyé avec succès!",
+      "error": "Une erreur s'est produite. Veuillez réessayer.",
+      "social": "Réseaux sociaux",
+      "or": "ou",
+      "findMe": "Retrouvez-moi sur"
+    },
+    "background": {
+        "change": "Changer le fond",
+        "particles": "Particules",
+        "grid": "Grille",
+        "waves": "Vagues"
+    },
+    "footer": {
+      "copyright": "© 2025 Tom Bouchard. Tous droits réservés.",
+      "madeWith": "Fait avec React et beaucoup de ☕"
+    },
+    "theme": {
+      "light": "Thème clair",
+      "dark": "Thème sombre"
+    },
+    "language": {
+      "fr": "Français",
+      "en": "Anglais"
+    }
+  }

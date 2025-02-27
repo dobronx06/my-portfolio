@@ -1,0 +1,119 @@
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    transition: filter var(--transition-normal);
+  }
+  
+  .animated-background.blur {
+    filter: blur(8px);
+  }
+  
+  .background-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity: 0.5;
+    mix-blend-mode: normal;
+  }
+  
+  .dark-mode .background-blob {
+    mix-blend-mode: lighten;
+  }
+  
+  .blob-1 {
+    width: 500px;
+    height: 500px;
+    background: rgba(45, 91, 241, 0.4);
+    top: -10%;
+    left: 10%;
+  }
+  
+  .blob-2 {
+    width: 400px;
+    height: 400px;
+    background: rgba(14, 165, 233, 0.4);
+    bottom: 10%;
+    right: 10%;
+  }
+  
+  .blob-3 {
+    width: 300px;
+    height: 300px;
+    background: rgba(244, 63, 94, 0.35);
+    top: 40%;
+    left: 40%;
+  }
+  
+  .dark-mode .blob-1 {
+    background: rgba(79, 124, 250, 0.4);
+  }
+  
+  .dark-mode .blob-2 {
+    background: rgba(56, 189, 248, 0.4);
+  }
+  
+  .dark-mode .blob-3 {
+    background: rgba(248, 112, 150, 0.35);
+  }
+  
+  .background-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    opacity: 0.4;
+  }
+  
+  .dark-mode .background-grid {
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  }
+  
+  .noise-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.015;
+    pointer-events: none;
+  }
+  
+  /* Media query for mobile devices to reduce performance impact */
+  @media (max-width: 768px) {
+    .background-blob {
+      filter: blur(60px);
+    }
+    
+    .blob-1 {
+      width: 300px;
+      height: 300px;
+    }
+    
+    .blob-2 {
+      width: 250px;
+      height: 250px;
+    }
+    
+    .blob-3 {
+      width: 200px;
+      height: 200px;
+    }
+    
+    .background-grid {
+      background-size: 20px 20px;
+    }
+  }

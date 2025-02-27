@@ -1,0 +1,114 @@
+.contact-preview {
+    padding: var(--spacing-8) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-preview-content {
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-preview-title {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-2);
+  }
+  
+  .contact-preview-subtitle {
+    color: var(--color-muted);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-8);
+  }
+  
+  .contact-preview-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-8);
+    width: 100%;
+  }
+  
+  .contact-preview-divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: var(--spacing-8) 0;
+  }
+  
+  .divider-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--color-border);
+  }
+  
+  .divider-text {
+    padding: 0 var(--spacing-4);
+    color: var(--color-muted);
+    font-size: var(--font-size-sm);
+  }
+  
+  .contact-preview-social {
+    width: 100%;
+  }
+  
+  .social-text {
+    margin-bottom: var(--spacing-4);
+    color: var(--color-muted);
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-4);
+  }
+  
+  .social-link-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-3) var(--spacing-6);
+    background-color: var(--color-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    color: var(--color-foreground);
+    transition: all var(--transition-fast);
+    position: relative;
+  }
+  
+  .social-link-item:hover {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .external-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    opacity: 0.5;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 640px) {
+    .contact-preview-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .social-links {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .social-link-item {
+      justify-content: center;
+    }
+  }

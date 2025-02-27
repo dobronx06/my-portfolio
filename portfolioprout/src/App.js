@@ -5,6 +5,7 @@ import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import Resume from './components/pages/Resume';
 import About from './components/pages/About';
+import Chatbot from './components/pages/Chatbot';
 import NetworkAnimation from './components/Background/particleEffect.js';
 import ThemeToggle from './components/Theme/Theme.js';
 import WelcomePage from './components/pages/Welcome.js';
@@ -47,6 +48,10 @@ function App() {
           <Route 
             path="/resume" 
             element={<Resume />} 
+          />
+          <Route 
+            path="/chatbot" 
+            element={<Chatbot />}
           />
           <Route 
             path="*" 

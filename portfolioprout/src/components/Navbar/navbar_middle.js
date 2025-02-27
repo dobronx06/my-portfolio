@@ -10,20 +10,20 @@ const NavbarMiddle = () => {
     HOME: '/',
     ABOUT: '/about',
     RESUME: '/resume',
-    SERVICES: '/services',
+    CHATBOT: '/chatbot',
     CONTACT: '/contact'
   };
    
   let currentPage = path === Page.HOME ? 'HOME' : 
                    path === Page.ABOUT ? 'ABOUT' : 
                    path === Page.RESUME ? 'RESUME' : 
-                   path === Page.SERVICES ? 'SERVICES' : 'CONTACT';
+                   path === Page.CHATBOT ? 'CHATBOT' : 'CONTACT';
 
   let navItems = [
     { name: 'HOME', path: Page.HOME, isCurrent: currentPage === 'HOME' },
     { name: 'ABOUT', path: Page.ABOUT, isCurrent: currentPage === 'ABOUT' },
     { name: 'RESUME', path: Page.RESUME, isCurrent: currentPage === 'RESUME' },
-    { name: 'SERVICES', path: Page.SERVICES, isCurrent: currentPage === 'SERVICES' },
+    { name: 'CHATBOT', path: Page.CHATBOT, isCurrent: currentPage === 'CHATBOT' },
     { name: 'CONTACT', path: Page.CONTACT, isCurrent: currentPage === 'CONTACT' }
   ];
 

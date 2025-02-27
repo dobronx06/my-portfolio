@@ -1,0 +1,150 @@
+.about-page {
+    padding-bottom: var(--spacing-16);
+  }
+  
+  .about-hero {
+    padding: var(--spacing-32) 0 var(--spacing-16);
+    text-align: center;
+  }
+  
+  .about-title {
+    font-size: var(--font-size-5xl);
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .about-subtitle {
+    font-size: var(--font-size-xl);
+    color: var(--color-muted);
+    margin-bottom: var(--spacing-8);
+  }
+  
+  .about-intro {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-8);
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+  }
+  
+  .about-intro p {
+    margin-bottom: var(--spacing-6);
+  }
+  
+  .resume-download {
+    margin-top: var(--spacing-8);
+  }
+  
+  .skills-section,
+  .experience-section,
+  .education-section {
+    padding: var(--spacing-16) 0;
+  }
+  
+  .skills-section {
+    background-color: var(--color-card);
+  }
+  
+  .skills-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-8);
+  }
+  
+  .skills-category-button {
+    padding: var(--spacing-2) var(--spacing-4);
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    color: var(--color-muted);
+    font-size: var(--font-size-sm);
+    transition: all var(--transition-fast);
+  }
+  
+  .skills-category-button:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  
+  .skills-category-button.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-6);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .skill-item {
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-2);
+  }
+  
+  .skill-name {
+    font-weight: var(--font-weight-medium);
+  }
+  
+  .skill-level {
+    color: var(--color-muted);
+    font-size: var(--font-size-sm);
+  }
+  
+  .skill-bar {
+    height: 8px;
+    background-color: var(--color-border);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+  }
+  
+  .skill-progress {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    width: 0;
+    transition: width 1s ease-in-out;
+  }
+  
+  .animate-on-view.is-visible .skill-progress {
+    animation: fillBar 1.5s forwards;
+  }
+  
+  @keyframes fillBar {
+    from { width: 0; }
+    to { width: var(--width, 0); }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .about-hero {
+      padding: var(--spacing-24) 0 var(--spacing-12);
+    }
+    
+    .about-title {
+      font-size: var(--font-size-4xl);
+    }
+    
+    .about-subtitle {
+      font-size: var(--font-size-lg);
+    }
+    
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .skills-section,
+    .experience-section,
+    .education-section {
+      padding: var(--spacing-12) 0;
+    }
+  }

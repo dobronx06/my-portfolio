@@ -1,0 +1,100 @@
+/* Hide default cursor */
+html, body, a, button, [role="button"], .interactive {
+    cursor: none !important;
+  }
+  
+  /* Special case for input fields and text areas to keep normal cursor */
+  input, textarea, select {
+    cursor: text !important;
+  }
+  
+  /* Main cursor outer ring */
+  .custom-cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, mix-blend-mode 0.3s ease, opacity 0.3s ease;
+    mix-blend-mode: difference;
+  }
+  
+  /* Different colors for light/dark mode */
+  .custom-cursor.light-mode {
+    border-color: var(--color-primary);
+  }
+  
+  .custom-cursor.dark-mode {
+    border-color: var(--color-accent);
+  }
+  
+  /* Inner cursor dot */
+  .cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Different colors for light/dark mode */
+  .cursor-dot.light-mode {
+    background-color: var(--color-primary);
+  }
+  
+  .cursor-dot.dark-mode {
+    background-color: var(--color-accent);
+  }
+  
+  /* Hover state - when cursor is over interactive elements */
+  .custom-cursor.hovering {
+    width: 80px;
+    height: 80px;
+    background-color: var(--color-primary);
+    border-color: transparent;
+    mix-blend-mode: exclusion;
+  }
+  
+  .custom-cursor.dark-mode.hovering {
+    background-color: var(--color-accent);
+  }
+  
+  .cursor-dot.hovering {
+    opacity: 0;
+  }
+  
+  /* Click state */
+  .custom-cursor.clicking {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  
+  .cursor-dot.clicking {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  
+  /* Hidden state - when cursor leaves the window */
+  .custom-cursor.hidden, .cursor-dot.hidden {
+    opacity: 0;
+  }
+  
+  /* Media query for touch devices */
+  @media (hover: none) and (pointer: coarse) {
+    .custom-cursor, .cursor-dot {
+      display: none;
+    }
+    
+    html, body, a, button, [role="button"], .interactive {
+      cursor: auto !important;
+    }
+    
+    input, textarea, select {
+      cursor: auto !important;
+    }
+  }

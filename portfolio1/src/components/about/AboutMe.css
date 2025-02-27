@@ -1,0 +1,182 @@
+.about-me-container {
+    margin-bottom: var(--spacing-16);
+  }
+  
+  .about-me-header {
+    text-align: center;
+    margin-bottom: var(--spacing-12);
+  }
+  
+  .about-me-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-8);
+  }
+  
+  .about-me-image-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+  }
+  
+  .about-me-image {
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    aspect-ratio: 1/1;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .profile-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .profile-image-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.1;
+  }
+  
+  .about-me-info {
+    background-color: var(--color-card);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-6);
+    border: 1px solid var(--color-border);
+  }
+  
+  .info-name {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-1);
+    color: var(--color-foreground);
+  }
+  
+  .info-role {
+    color: var(--color-primary);
+    font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+  }
+  
+  .info-label {
+    font-weight: var(--font-weight-medium);
+    color: var(--color-foreground);
+    min-width: 90px;
+    flex-shrink: 0;
+  }
+  
+  .info-value {
+    color: var(--color-muted);
+  }
+  
+  .info-link {
+    color: var(--color-primary);
+    transition: color var(--transition-fast);
+  }
+  
+  .info-link:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+  
+  .about-me-description {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+  }
+  
+  .description-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+  
+  .description-paragraph {
+    line-height: 1.8;
+    color: var(--color-muted);
+  }
+  
+  .about-me-interests {
+    background-color: var(--color-card);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-6);
+    border: 1px solid var(--color-border);
+  }
+  
+  .interests-title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-4);
+    color: var(--color-foreground);
+  }
+  
+  .interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+  }
+  
+  .interest-tag {
+    background-color: var(--color-background);
+    color: var(--color-muted);
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-2) var(--spacing-3);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+  }
+  
+  .resume-download {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: var(--spacing-4);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .about-me-content {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-8);
+    }
+    
+    .about-me-image-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-6);
+      margin-bottom: var(--spacing-6);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-me-image-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .about-me-image {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    
+    .resume-download {
+      justify-content: center;
+    }
+  }
