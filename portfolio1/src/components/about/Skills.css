@@ -1,0 +1,146 @@
+/* Skills.css */
+.skills-section {
+    padding: 80px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+  }
+  
+  .skills-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .skills-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .skills-category-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .skills-category-button.active {
+    background-color: #4a6cf7;
+    color: white;
+  }
+  
+  .skills-category-button:hover:not(.active) {
+    background-color: #e0e0e0;
+  }
+  
+  /* Modern card-based skills display */
+  .skills-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+  }
+  
+  .skill-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  }
+  
+  .skill-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .skill-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .skill-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Dark mode support */
+  [data-theme="dark"] .skills-category-button {
+    background-color: #2d3748;
+    color: #f0f0f0;
+  }
+  
+  [data-theme="dark"] .skills-category-button.active {
+    background-color: #4a6cf7;
+    color: white;
+  }
+  
+  [data-theme="dark"] .skills-category-button:hover:not(.active) {
+    background-color: #3a4a5e;
+  }
+  
+  [data-theme="dark"] .skill-card {
+    background-color: #2d3748;
+  }
+  
+  [data-theme="dark"] .skill-name {
+    color: #f0f0f0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .skills-cards-container {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 15px;
+    }
+    
+    .skill-icon {
+      width: 45px;
+      height: 45px;
+    }
+    
+    .skill-name {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skills-cards-container {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 10px;
+    }
+    
+    .skills-category-button {
+      padding: 8px 15px;
+      font-size: 14px;
+    }
+  }

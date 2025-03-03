@@ -1,131 +1,133 @@
 // Mock experiences data
 const experiences = [
-    {
-      id: 1,
-      title: "Développeur Frontend",
-      company: "Tech Solutions",
-      location: "Paris, France",
-      startDate: "2023-09",
-      endDate: "Present",
-      description: [
-        "Développement d'applications web React performantes et responsives",
-        "Collaboration avec l'équipe design pour implémenter des interfaces utilisateur intuitives",
-        "Optimisation des performances et de l'accessibilité des applications",
-        "Mise en place de tests unitaires et d'intégration"
-      ],
-      descriptionEn: [
-        "Development of performant and responsive React web applications",
-        "Collaboration with the design team to implement intuitive user interfaces",
-        "Optimization of application performance and accessibility",
-        "Implementation of unit and integration tests"
-      ],
-      technologies: ["React", "JavaScript", "TypeScript", "CSS3", "Jest"]
-    },
-    {
-      id: 2,
-      title: "Développeur Web Junior",
-      company: "Digital Agency",
-      location: "Lyon, France",
-      startDate: "2022-06",
-      endDate: "2023-08",
-      description: [
-        "Création de sites web dynamiques pour divers clients",
-        "Intégration de designs responsive en HTML/CSS/JavaScript",
-        "Développement de fonctionnalités interactives et animations",
-        "Maintenance et mise à jour de projets existants"
-      ],
-      descriptionEn: [
-        "Creation of dynamic websites for various clients",
-        "Integration of responsive designs in HTML/CSS/JavaScript",
-        "Development of interactive features and animations",
-        "Maintenance and updating of existing projects"
-      ],
-      technologies: ["HTML5", "CSS3", "JavaScript", "WordPress", "PHP"]
-    },
-    {
-      id: 3,
-      title: "Stage en Développement Web",
-      company: "StartupLab",
-      location: "Bordeaux, France",
-      startDate: "2022-01",
-      endDate: "2022-05",
-      description: [
-        "Participation au développement d'une application web pour une startup innovante",
-        "Création de composants d'interface utilisateur réutilisables",
-        "Collaboration avec l'équipe produit pour définir les fonctionnalités",
-        "Apprentissage des méthodes agiles et du développement itératif"
-      ],
-      descriptionEn: [
-        "Participation in web application development for an innovative startup",
-        "Creation of reusable user interface components",
-        "Collaboration with the product team to define features",
-        "Learning agile methods and iterative development"
-      ],
-      technologies: ["React", "JavaScript", "Bootstrap", "Git"]
-    }
-  ];
-  
-  // Education data
-  const education = [
-    {
-      id: 1,
-      degree: "Master en Développement Web",
-      institution: "École du Numérique",
-      location: "Paris, France",
-      startDate: "2020-09",
-      endDate: "2022-06",
-      description: [
-        "Spécialisation en développement frontend",
-        "Projets pratiques en équipe sur des cas réels",
-        "Apprentissage des technologies web modernes",
-        "Mémoire sur l'optimisation des interfaces utilisateur"
-      ],
-      descriptionEn: [
-        "Specialization in frontend development",
-        "Practical team projects on real-world cases",
-        "Learning modern web technologies",
-        "Thesis on user interface optimization"
-      ]
-    },
-    {
-      id: 2,
-      degree: "Licence en Informatique",
-      institution: "Université de Lyon",
-      location: "Lyon, France",
-      startDate: "2017-09",
-      endDate: "2020-06",
-      description: [
-        "Fondamentaux de la programmation et des algorithmes",
-        "Introduction aux bases de données et réseaux",
-        "Apprentissage de multiples langages de programmation",
-        "Projet de fin d'études sur le développement d'applications web"
-      ],
-      descriptionEn: [
-        "Fundamentals of programming and algorithms",
-        "Introduction to databases and networks",
-        "Learning multiple programming languages",
-        "Final year project on web application development"
-      ]
-    }
-  ];
-  
-  export const getAllExperiences = () => {
-    return experiences;
-  };
-  
-  export const getAllEducation = () => {
-    return education;
-  };
-  
-  export const getExperienceById = (id) => {
-    return experiences.find(exp => exp.id === parseInt(id));
-  };
-  
-  export const getEducationById = (id) => {
-    return education.find(edu => edu.id === parseInt(id));
-  };
-  
-  export default {
-    experiences,
-    education
-  };
+  {
+    id: 1,
+    title: "Stage de Développement Gaming",
+    company: "Selesis Studios",
+    location: "Saint-Cyprien, France",
+    startDate: "2019-12",
+    endDate: "2019-12",
+    description: [
+      "Apprentissage du développement de scénes de jeux vidéos pour ordinateurs",
+      "Collaboration avec l'équipe de développement pour la création de jeux",
+      "Découverte des outils et technologies utilisés dans l'industrie du jeu vidéo",
+      "Découverte du langage de programmation C# et du moteur de jeu Unity"
+    ],
+    descriptionEn: [
+      "Learning video game scene development for computers",
+      "Collaboration with the development team to create games",
+      "Discovery of tools and technologies used in the video game industry",
+      "Discovery of the C# programming language and the Unity game engine"
+    ],
+    technologies: ["C#", "Unity", "Mixamo", "Game Development"]
+  },
+  {
+    id: 2,
+    title: "Stage en Développement Logiciel",
+    company: "Elloha",
+    location: "France",
+    startDate: "2024-07",
+    endDate: "2024-12",
+    description: [
+      "Travail sur divers projets de solutions technologiques de voyage",
+      "Développement backend en C# pour l'intégration de systèmes",
+      "Intégration frontend en HTML/CSS",
+      "Acquisition d'une expérience pratique en développement logiciel"
+    ],
+    descriptionEn: [
+      "Working on various travel technology solution projects",
+      "Backend development in C# for system integration",
+      "Frontend integration in HTML/CSS",
+      "Gaining practical experience in software development"
+    ],
+    technologies: ["C#", "HTML", "CSS", "Backend Integration", "Frontend Development"]
+  },
+  {
+    id: 3,
+    title: "Étudiant en Deuxième Année",
+    company: "Epitech Montpellier",
+    location: "Montpellier, France",
+    startDate: "2025-01",
+    endDate: "present",
+    description: [
+      "Poursuite des études en informatique après une maîtrise de Python, C, C# et HTML/CSS",
+      "Apprentissage du C++",
+      "Exploration des technologies web modernes comme React",
+      "Intérêt pour les modèles d'IA, les agents IA, les cryptomonnaies et les technologies d'avenir"
+    ],
+    descriptionEn: [
+      "Continuing computer science studies after mastering Python, C, C# and HTML/CSS",
+      "Learning C++",
+      "Exploring modern web technologies like React",
+      "Interest in AI models, AI agents, cryptocurrencies, and future technologies"
+    ],
+    technologies: ["C++", "Python", "React", "AI", "Cryptocurrency"]
+  }
+];
+
+// Education data
+const education = [
+  {
+    id: 1,
+    degree: "Baccalauréat avec mention",
+    institution: "Lycée Notre-Dame de Bonsecours",
+    location: "Perpignan, France",
+    startDate: "2022-09",
+    endDate: "2023-06",
+    description: [
+      "Obtention du Baccalauréat avec mention en 2023",
+      "Formation générale avec focus sur les sciences",
+      "Préparation aux études supérieures en informatique",
+      "Développement de compétences analytiques et logiques"
+    ],
+    descriptionEn: [
+      "Obtained Baccalaureate with honors in 2023",
+      "General education with focus on sciences",
+      "Preparation for higher education in computer science",
+      "Development of analytical and logical skills"
+    ]
+  },
+  {
+    id: 2,
+    degree: "Formation en Informatique",
+    institution: "Epitech Montpellier",
+    location: "Montpellier, France",
+    startDate: "2023-09",
+    endDate: "present",
+    description: [
+      "Programme intensif en développement informatique",
+      "Apprentissage par projets pratiques",
+      "Maîtrise des langages de programmation: C, Python, C#, C++",
+      "Projets par équipe, en duo et individuels"
+    ],
+    descriptionEn: [
+      "Intensive computer development program",
+      "Learning through practical projects",
+      "Mastery of programming languages: C, Python, C#, C++",
+      "Team, pair, and individual projects"
+    ]
+  }
+];
+
+export const getAllExperiences = () => {
+  return experiences;
+};
+
+export const getAllEducation = () => {
+  return education;
+};
+
+export const getExperienceById = (id) => {
+  return experiences.find(exp => exp.id === parseInt(id));
+};
+
+export const getEducationById = (id) => {
+  return education.find(edu => edu.id === parseInt(id));
+};
+
+const experiencesData = {
+  experiences,
+  education
+};
+
+export default experiencesData;

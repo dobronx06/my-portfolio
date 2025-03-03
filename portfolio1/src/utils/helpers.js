@@ -4,26 +4,34 @@
  * @param {string} language - Language code (fr or en)
  * @returns {string} - Formatted date string
  */
-export const formatDate = (dateString, language = 'fr') => {
-    if (!dateString) return '';
+export const formatDate = (dateString) => {
+  // Check if the date is valid before formatting
+  if (!dateString || dateString === 'now' || dateString === 'present') {
+    return 'Present';
+  }
+  
+  try {
+    // Try to create a valid date object
+    const date = new Date(dateString);
     
-    // Handle special case for "Present"
-    if (dateString === 'Present') {
-      return language === 'fr' ? 'Présent' : 'Present';
+    // Check if the date is valid
+    if (isNaN(date.getTime())) {
+      // If date is invalid, just return the original string
+      return dateString;
     }
     
-    // Parse the date string and create a date object
-    const [year, month] = dateString.split('-').map(Number);
-    
-    // Create a date object (day is set to 1)
-    const date = new Date(year, month - 1, 1);
-    
-    // Format options for different languages
-    const options = { year: 'numeric', month: 'long' };
-    
-    // Use Intl.DateTimeFormat to format the date
-    return new Intl.DateTimeFormat(language === 'fr' ? 'fr-FR' : 'en-US', options).format(date);
-  };
+    // Format the date
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long'
+    });
+  } catch (error) {
+    // If any error occurs, return the original string
+    console.warn('Date formatting error:', error);
+    return dateString;
+  }
+};
+
   
   /**
    * Generate a random ID

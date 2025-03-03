@@ -5,7 +5,17 @@ export const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
-    return savedTheme ? JSON.parse(savedTheme) : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // Check if savedTheme exists and handle it properly
+    if (savedTheme !== null) {
+      try {
+        return JSON.parse(savedTheme);
+      } catch (e) {
+        // If parsing fails, check if it's the string "dark"
+        return savedTheme === "dark";
+      }
+    }
+    // Default to system preference if no saved theme
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
 
   useEffect(() => {
@@ -23,3 +33,5 @@ export const ThemeProvider = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
+
+export default ThemeProvider;

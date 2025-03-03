@@ -5,6 +5,7 @@ import Timeline from '../components/ui/Timeline';
 import { getAllExperiences, getAllEducation } from '../assets/data/experiences';
 import { getAllSkills, getAllCategories } from '../assets/data/skills';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { SkillsSection } from '../components/about/Skills';
 import './AboutPage.css';
 
 const AboutPage = () => {
@@ -54,40 +55,13 @@ const AboutPage = () => {
         ref={skillsRef} 
         className={`skills-section animate-on-view ${skillsVisible ? 'is-visible' : ''}`}
       >
-        <div className="container">
-          <h2 className="section-title">{t('about.skills')}</h2>
-          
-          <div className="skills-categories">
-            {categories.map(category => (
-              <button 
-                key={category}
-                className={`skills-category-button ${activeSkillCategory === category ? 'active' : ''}`}
-                onClick={() => setActiveSkillCategory(category)}
-              >
-                {capitalizeFirstLetter(category)}
-              </button>
-            ))}
-          </div>
-          
-          <div className="skills-grid">
-            {skills[activeSkillCategory].map((skill) => (
-              <div key={skill.name} className="skill-item">
-                <div className="skill-info">
-                  <span className="skill-name">
-                    {language === 'fr' && skill.nameEn ? skill.name : (skill.nameEn || skill.name)}
-                  </span>
-                  <span className="skill-level">{skill.level}%</span>
-                </div>
-                <div className="skill-bar">
-                  <div 
-                    className="skill-progress" 
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <SkillsSection
+          skills={skills}
+          categories={categories}
+          activeSkillCategory={activeSkillCategory}
+          setActiveSkillCategory={setActiveSkillCategory}
+          language={language}
+        />
       </section>
       
       <section 

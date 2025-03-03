@@ -4,113 +4,78 @@ const skills = {
       {
         name: "HTML5",
         level: 90,
-        icon: "html5-icon" // You can replace with actual icon paths or components
+        icon: "../../assets/images/html.svg"
       },
       {
         name: "CSS3",
         level: 85,
-        icon: "css3-icon"
+        icon: "../../assets/images/css.svg"
       },
       {
         name: "JavaScript",
         level: 90,
-        icon: "javascript-icon"
+        icon: "../../assets/images/js.svg"
       },
       {
         name: "React",
         level: 85,
-        icon: "react-icon"
+        icon: "../../assets/images/react.svg"
       },
       {
         name: "TypeScript",
         level: 75,
-        icon: "typescript-icon"
-      },
-      {
-        name: "SASS/SCSS",
-        level: 80,
-        icon: "sass-icon"
+        icon: "../../assets/images/ts.svg"
       },
       {
         name: "Responsive Design",
         level: 90,
-        icon: "responsive-icon"
+        icon: "../../assets/images/responsive.svg"
       }
     ],
     backend: [
       {
         name: "Node.js",
         level: 70,
-        icon: "nodejs-icon"
-      },
-      {
-        name: "Express",
-        level: 65,
-        icon: "express-icon"
+        icon: "../../assets/images/nodejs.svg"
       },
       {
         name: "REST API",
         level: 75,
-        icon: "api-icon"
+        icon: "../../assets/images/restAPI.svg"
       },
-      {
-        name: "MongoDB",
-        level: 60,
-        icon: "mongodb-icon"
-      },
-      {
-        name: "PHP",
-        level: 55,
-        icon: "php-icon"
-      }
     ],
     tools: [
       {
-        name: "Git",
+        name: "GitHub",
         level: 80,
-        icon: "git-icon"
+        icon: "../../assets/images/github.svg"
       },
       {
         name: "VS Code",
         level: 90,
-        icon: "vscode-icon"
+        icon: "../../assets/images/vs.svg"
       },
       {
-        name: "Webpack",
-        level: 60,
-        icon: "webpack-icon"
-      },
-      {
-        name: "Jest",
-        level: 65,
-        icon: "jest-icon"
+        name: "Visual Studio Microsoft",
+        level: 85,
+        icon: "../../assets/images/Mvs.svg"
       },
       {
         name: "npm/yarn",
         level: 85,
-        icon: "npm-icon"
+        icon: "../../assets/images/npm.svg"
       }
     ],
     design: [
       {
         name: "Figma",
         level: 75,
-        icon: "figma-icon"
-      },
-      {
-        name: "Adobe XD",
-        level: 65,
-        icon: "xd-icon"
+        icon: "../../assets/images/figma.svg"
       },
       {
         name: "UI/UX Design",
         level: 70,
-        icon: "uiux-icon"
-      },
-      {
-        name: "Photoshop",
-        level: 60,
-        icon: "photoshop-icon"
+        icon: "../../assets/images/ux.svg"
       }
     ],
     softSkills: [
@@ -118,31 +83,31 @@ const skills = {
         name: "Travail d'équipe",
         nameEn: "Teamwork",
         level: 90,
-        icon: "team-icon"
+        icon: "../../assets/images/team.svg"
       },
       {
         name: "Communication",
         nameEn: "Communication",
         level: 85,
-        icon: "communication-icon"
+        icon: "../../assets/images/com.svg"
       },
       {
         name: "Gestion de projet",
         nameEn: "Project Management",
         level: 75,
-        icon: "project-icon"
+        icon: "../../assets/images/project.svg"
       },
       {
         name: "Résolution de problèmes",
         nameEn: "Problem Solving",
         level: 85,
-        icon: "problem-icon"
+        icon: "../../assets/images/problem.svg"
       },
       {
         name: "Adaptabilité",
         nameEn: "Adaptability",
         level: 90,
-        icon: "adaptability-icon"
+        icon: "../../assets/images/adaptation.svg"
       }
     ]
   };
