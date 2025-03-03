@@ -12,10 +12,6 @@ export const SkillsSection = ({
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
 
-  const getIconComponent = (iconName) => {
-    return <div className="placeholder-icon">{iconName.charAt(0).toUpperCase()}</div>;
-  };
-
   const renderIcon = (iconPath) => {
     try {
       // Try to import the image directly
